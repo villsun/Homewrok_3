@@ -28,14 +28,32 @@ int Mystrcmp(const char* str_1, const char* str_2)
 	}
 }
 
+int String_to_Number(char* str)
+{
+	int number = 0;
+	int size = strlen(str);
+	for (int i = 0; i < size; i++)
+	{
+		number = number * 10 + (str[i] - '0');
+	}
+	return number;
+}
+
 int main()
 {
 	// Завдання 1
 
-	char str_1[] = "Helloo";
+	/*char str_1[] = "Hello";
 	char str_2[] = "Hello";
 
 	int result = Mystrcmp(str_1, str_2);
+
+	cout << "Result = " << result << endl;*/
+
+	//Завдання 2
+
+	char str[] = "123";
+	int result = String_to_Number(str);
 
 	cout << "Result = " << result << endl;
 

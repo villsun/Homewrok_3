@@ -46,7 +46,7 @@ char* Create_Array_Char(int size)
 	return p_char;
 }
 
-void Delate_Array_Char(char* p)
+void Delete_Array_Char(char* p)
 {
 	delete[] p;
 }
@@ -84,6 +84,29 @@ char* Number_to_String(int number)
 	return p_char;
 }
 
+char* Uppercase(char* str_arr)
+{
+	int size = strlen(str_arr);
+
+	char* p_char = Create_Array_Char(size);
+
+	for (int i = 0; i < size; i++)
+	{
+		if (str_arr[i] >= 'a' && str_arr[i] <= 'z')
+		{
+			p_char[i] = str_arr[i] - ' ';
+		}
+		else 
+		{
+			p_char[i] = str_arr[i];
+		}
+	}
+
+	p_char[size] = '\0';
+
+	return p_char;
+}
+
 int main()
 {
 	// Завдання 1
@@ -95,19 +118,28 @@ int main()
 
 	cout << "Result = " << result << endl;*/
 
-	//Завдання 2
+	// Завдання 2
 
 	/*char str[] = "123";
 	int result = String_to_Number(str);
 
 	cout << "Result = " << result << endl;*/
 
-	//Завдання 3
+	// Завдання 3
 
-	char* p_char = Number_to_String(123345);
+	/*char* p_char = Number_to_String(123345);
 
-	cout << "Result = " << p_char << endl;
+	cout << "Result = " << p_char << endl;*/
 
+	// Завдання 4
+	
+
+	char str[] = "Hello World!";
+	char* p_char = Uppercase(str);
+
+	cout << p_char;
+
+	
 
 	return 0;
 }

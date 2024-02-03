@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int Mystrcmp(const char* str_1, const char* str_2)
+int My_Strcmp(const char* str_1, const char* str_2)
 {
 	int size_1 = strlen(str_1);
 	int size_2 = strlen(str_2);

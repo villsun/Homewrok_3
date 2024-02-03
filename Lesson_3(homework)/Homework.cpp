@@ -1,4 +1,5 @@
-﻿#include <iostream>
+﻿#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
 #include <string.h>
 
 using namespace std;
@@ -50,10 +51,32 @@ void Delate_Array_Char(char* p)
 	delete[] p;
 }
 
-char* Number_to_String(int number)
+void Reverse(char*& p_char, int size)
 {
-
+	int counter = 1;
+	for (int i = 0; i < size / 2; i++)
+	{
+		swap(p_char[i], p_char[size - counter]);
+		counter++;
+	}
 }
+
+//char* Number_to_String(int number)
+//{
+//	int temp = number;
+//	int counter = 0;
+//	for (int i = temp; i != 0; i /= 10)
+//	{
+//		counter++;
+//	}
+//
+//	char* p_char = Create_Array_Char(counter);
+//
+//	for (int i = 0; i < counter; i++, temp/=10)
+//	{
+//		p_char[i] = temp % 10;
+//	}
+//}
 
 int main()
 {
@@ -68,7 +91,7 @@ int main()
 
 	//Завдання 2
 
-	c/*har str[] = "123";
+	/*char str[] = "123";
 	int result = String_to_Number(str);
 
 	cout << "Result = " << result << endl;*/

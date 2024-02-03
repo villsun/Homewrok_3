@@ -61,22 +61,28 @@ void Reverse(char*& p_char, int size)
 	}
 }
 
-//char* Number_to_String(int number)
-//{
-//	int temp = number;
-//	int counter = 0;
-//	for (int i = temp; i != 0; i /= 10)
-//	{
-//		counter++;
-//	}
-//
-//	char* p_char = Create_Array_Char(counter);
-//
-//	for (int i = 0; i < counter; i++, temp/=10)
-//	{
-//		p_char[i] = temp % 10;
-//	}
-//}
+char* Number_to_String(int number)
+{
+	int temp = number;
+	int counter = 0;
+	for (int i = temp; i != 0; i /= 10)
+	{
+		counter++;
+	}
+
+	char* p_char = Create_Array_Char(counter);
+
+	for (int i = 0; i < counter; i++, temp /= 10)
+	{
+		p_char[i] = temp % 10 + '0';
+	}
+
+	p_char[counter] = '\0';
+
+	Reverse(p_char, counter);
+
+	return p_char;
+}
 
 int main()
 {
@@ -95,6 +101,13 @@ int main()
 	int result = String_to_Number(str);
 
 	cout << "Result = " << result << endl;*/
+
+	//Завдання 3
+
+	char* p_char = Number_to_String(123345);
+
+	cout << "Result = " << p_char << endl;
+
 
 	return 0;
 }

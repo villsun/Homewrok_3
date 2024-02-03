@@ -39,6 +39,22 @@ int String_to_Number(char* str)
 	return number;
 }
 
+char* Create_Array_Char(int size)
+{
+	char* p_char = new char[size];
+	return p_char;
+}
+
+void Delate_Array_Char(char* p)
+{
+	delete[] p;
+}
+
+char* Number_to_String(int number)
+{
+
+}
+
 int main()
 {
 	// Завдання 1
@@ -52,10 +68,10 @@ int main()
 
 	//Завдання 2
 
-	char str[] = "123";
+	c/*har str[] = "123";
 	int result = String_to_Number(str);
 
-	cout << "Result = " << result << endl;
+	cout << "Result = " << result << endl;*/
 
 	return 0;
 }

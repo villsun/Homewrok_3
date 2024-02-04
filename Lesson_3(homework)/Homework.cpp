@@ -107,6 +107,29 @@ char* Uppercase(char* str_arr)
 	return p_char;
 }
 
+char* Lowercase(char* str_arr)
+{
+	int size = strlen(str_arr);
+
+	char* p_char = Create_Array_Char(size);
+
+	for (int i = 0; i < size; i++)
+	{
+		if (str_arr[i] >= 'A' && str_arr[i] <= 'Z')
+		{
+			p_char[i] = str_arr[i] + ' ';
+		}
+		else
+		{
+			p_char[i] = str_arr[i];
+		}
+	}
+
+	p_char[size] = '\0';
+
+	return p_char;
+}
+
 int main()
 {
 	// Завдання 1
@@ -133,13 +156,17 @@ int main()
 
 	// Завдання 4
 	
-
-	char str[] = "Hello World!";
+	/*char str[] = "Hello World!";
 	char* p_char = Uppercase(str);
 
-	cout << p_char;
+	cout << p_char;*/
 
-	
+	// Завдання 4
+
+	char str[] = "HeLLo WorLd!";
+	char* p_char = Lowercase(str);
+
+	cout << p_char;
 
 	return 0;
 }

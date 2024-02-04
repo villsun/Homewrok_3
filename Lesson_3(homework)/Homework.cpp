@@ -130,6 +130,30 @@ char* Lowercase(char* str_arr)
 	return p_char;
 }
 
+char* Mystrrev(char* str_arr)
+{
+	int size = strlen(str_arr);
+
+	char* p_char = Create_Array_Char(size);
+
+	for (int i = 0; i < size; i++)
+	{
+		p_char[i] = str_arr[i];
+	}
+
+	int counter = 1;
+
+	for (int i = 0; i < size / 2; i++)
+	{
+		swap(p_char[i], p_char[size - counter]);
+		counter++;
+	}
+
+	p_char[size] = '\0';
+
+	return p_char;
+}
+
 int main()
 {
 	// Завдання 1
@@ -161,10 +185,17 @@ int main()
 
 	cout << p_char;*/
 
-	// Завдання 4
+	// Завдання 5
 
-	char str[] = "HeLLo WorLd!";
+	/*char str[] = "HeLLo WorLd!";
 	char* p_char = Lowercase(str);
+
+	cout << p_char;*/
+
+	// Завдання 6
+
+	char str[] = "Madam";
+	char* p_char = Mystrrev(str);
 
 	cout << p_char;
 

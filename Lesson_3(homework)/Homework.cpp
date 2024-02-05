@@ -70,7 +70,7 @@ char* Number_to_String(int number)
 		counter++;
 	}
 
-	char* p_char = Create_Array_Char(counter);
+	char* p_char = Create_Array_Char(counter+1);
 
 	for (int i = 0; i < counter; i++, temp /= 10)
 	{
@@ -88,7 +88,7 @@ char* Uppercase(char* str_arr)
 {
 	int size = strlen(str_arr);
 
-	char* p_char = Create_Array_Char(size);
+	char* p_char = Create_Array_Char(size+1);
 
 	for (int i = 0; i < size; i++)
 	{
@@ -96,7 +96,7 @@ char* Uppercase(char* str_arr)
 		{
 			p_char[i] = str_arr[i] - ' ';
 		}
-		else 
+		else
 		{
 			p_char[i] = str_arr[i];
 		}
@@ -111,7 +111,7 @@ char* Lowercase(char* str_arr)
 {
 	int size = strlen(str_arr);
 
-	char* p_char = Create_Array_Char(size);
+	char* p_char = Create_Array_Char(size + 1);
 
 	for (int i = 0; i < size; i++)
 	{
@@ -134,7 +134,7 @@ char* Mystrrev(char* str_arr)
 {
 	int size = strlen(str_arr);
 
-	char* p_char = Create_Array_Char(size);
+	char* p_char = Create_Array_Char(size + 1);
 
 	for (int i = 0; i < size; i++)
 	{
@@ -174,30 +174,38 @@ int main()
 
 	// Завдання 3
 
-	/*char* p_char = Number_to_String(123345);
+	char* p_char = Number_to_String(123345);
 
-	cout << "Result = " << p_char << endl;*/
+	cout << "Result = " << p_char << endl;
+
+	Delete_Array_Char(p_char);
 
 	// Завдання 4
-	
+
 	/*char str[] = "Hello World!";
 	char* p_char = Uppercase(str);
 
-	cout << p_char;*/
+	cout << p_char;
+
+	Delete_Array_Char(p_char);*/
 
 	// Завдання 5
 
 	/*char str[] = "HeLLo WorLd!";
 	char* p_char = Lowercase(str);
 
-	cout << p_char;*/
+	cout << p_char;
+
+	Delete_Array_Char(p_char);*/
 
 	// Завдання 6
 
-	char str[] = "Madam";
+	/*char str[] = "Madam";
 	char* p_char = Mystrrev(str);
 
 	cout << p_char;
+
+	Delete_Array_Char(p_char);*/
 
 	return 0;
 }
